@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ArboFors — спил деревьев любой сложности</title>
+<style>
+:root{--orange:#ff6508;--bg:#080808;--muted:#bdbdbd;--line:#7d330d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f6f6f6;font-family:Arial,Helvetica,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 75% 20%,#1a1a1a 0,transparent 42%),linear-gradient(135deg,transparent 70%,#301304);z-index:-1}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}.orange{color:var(--orange)}
+header{position:sticky;top:0;z-index:10;background:#080808eF;border-bottom:1px solid #333;backdrop-filter:blur(8px)}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:30px;font-style:italic;letter-spacing:-1px}.tree{color:var(--orange);font-size:42px;line-height:1}.logo span{color:var(--orange)}
+.links{display:flex;gap:25px;font-size:14px;font-weight:700}.links a:hover{color:var(--orange)}
+.phone{border:1px solid var(--orange);border-radius:40px;padding:12px 18px;font-weight:bold;white-space:nowrap}.phone b{color:var(--orange)}
+.hero{padding:65px 0 50px;min-height:470px;position:relative;overflow:hidden;background:linear-gradient(100deg,#090909 55%,#17100b 100%)}
+.hero:after{content:"";position:absolute;right:-80px;top:0;width:48%;height:100%;background:repeating-linear-gradient(135deg,transparent 0 18px,#ff6508 19px 23px,transparent 24px 45px);opacity:.16;transform:skewX(-12deg)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:25px;position:relative;z-index:1}
+h1{font-size:clamp(38px,5.6vw,72px);line-height:.98;margin:0 0 18px;font-weight:900;text-transform:uppercase;letter-spacing:-1px}h1 .brand{color:var(--orange);font-style:italic;text-transform:none}
+.lead{font-size:18px;color:#ddd;margin:20px 0}.hero ul{list-style:none;padding:0;margin:20px 0;font-size:18px}.hero li{margin:9px 0}.hero li:before{content:"▲";color:var(--orange);margin-right:13px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--orange);color:#080808;font-weight:900;font-size:18px;padding:17px 24px;border-radius:5px;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%);transition:transform .2s}.btn:hover{transform:translateY(-3px)}
+.hero-art{height:340px;display:flex;align-items:center;justify-content:center;font-size:clamp(90px,18vw,210px);filter:drop-shadow(0 12px 20px #000);transform:rotate(-12deg)}
+.section{padding:42px 0}.heading{text-align:center;font-size:34px;font-weight:900;margin:0 0 28px}.heading:after{content:"";display:block;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--orange),transparent);margin-top:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service{border:1px solid var(--line);padding:25px;display:flex;gap:18px;background:#101010;min-height:150px;align-items:center}.service .symbol{font-size:54px;color:var(--orange)}.service h3{font-size:20px;margin:0 0 9px}.service p{font-size:14px;color:#ccc;margin:0;line-height:1.45}
+.advantages{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.adv{display:flex;gap:18px;padding:20px;border-right:1px solid var(--line)}.adv:last-child{border:0}.adv .symbol{font-size:42px;color:var(--orange)}.adv h3{color:var(--orange);margin:0 0 7px;font-size:21px}.adv p{margin:0;color:#ddd;line-height:1.45}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery img{width:100%;height:210px;object-fit:cover;border:2px solid var(--orange);filter:saturate(.85);clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
+.cta{padding:50px 0;background:linear-gradient(110deg,#101010,#080808);border-block:1px solid #40200c}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-size:38px;margin:0 0 10px}.cta p{font-size:18px;margin:0 0 20px;color:#ccc}.bigphone{font-size:clamp(24px,4vw,42px);font-weight:900;background:var(--orange);color:#111;padding:16px 24px;display:inline-block;clip-path:polygon(5% 0,100% 0,95% 100%,0 100%)}
+footer{padding:25px 0;border-top:1px solid #333}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot strong{font-size:25px}.foot .motto{color:var(--orange);font-weight:bold}
+@media(max-width:800px){.links{display:none}.hero-grid{grid-template-columns:1fr}.hero-art{height:180px}.cards,.advantages,.gallery{grid-template-columns:1fr}.gallery img{height:230px}.adv{border-right:0;border-bottom:1px solid var(--line)}.cta-inner{display:block}.cta h2{font-size:30px}.phone{font-size:13px;padding:10px}.logo{font-size:24px}}
+@media(max-width:460px){nav{min-height:65px}.phone{max-width:150px;overflow:hidden}.hero{padding-top:40px}.hero ul{font-size:16px}.btn{font-size:16px}.service{padding:18px}.heading{font-size:28px}.foot{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#top"><span class="tree">▲</span><span>Arbo</span>Fors</a>
+<div class="links"><a href="#services">Услуги</a><a href="#about">О нас</a><a href="#advantages">Преимущества</a><a href="#gallery">Галерея</a><a href="#contacts">Контакты</a></div>
+<a class="phone" href="tel:+79538256904"><b>☎</b> +7 953 825-69-04</a>
+</nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid"><div>
+<h1><span class="brand">ArboFors</span><br>Спил деревьев<br><span style="font-size:.72em">любой сложности</span></h1>
+<ul><li>Удаление деревьев</li><li>Обрезка и кронирование</li><li>Вывоз и утилизация</li></ul>
+<a class="btn" href="tel:+79538256904">☎ Позвонить сейчас&nbsp; →</a>
+</div><div class="hero-art" aria-label="Дерево и инструменты">🌲<span style="font-size:.65em">🪚</span></div></div></section>
+<section class="section wrap" id="services"><h2 class="heading">Наши <span class="orange">услуги</span></h2><div class="cards">
+<div class="service"><div class="symbol">🌲</div><div><h3>Удаление деревьев</h3><p>Безопасное удаление деревьев любой сложности</p></div></div>
+<div class="service"><div class="symbol">✂</div><div><h3>Обрезка и кронирование</h3><p>Формирование кроны и санитарная обрезка</p></div></div>
+<div class="service"><div class="symbol">🪵</div><div><h3>Вывоз и утилизация</h3><p>Уборка участка и вывоз древесины</p></div></div>
+</div></section>
+<section class="section wrap" id="advantages"><h2 class="heading">Почему <span class="orange">ArboFors</span>?</h2><div class="advantages">
+<div class="adv"><div class="symbol">🛡</div><div><h3>Безопасно</h3><p>Работаем по технике безопасности</p></div></div>
+<div class="adv"><div class="symbol">⏱</div><div><h3>Быстро</h3><p>Оперативный выезд и выполнение</p></div></div>
+<div class="adv"><div class="symbol">🏆</div><div><h3>Профессионально</h3><p>Опытные арбористы и современное оборудование</p></div></div>
+</div></section>
+<section class="section wrap" id="gallery"><h2 class="heading">Наши <span class="orange">работы</span></h2><div class="gallery">
+<img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=900&q=80" alt="Работа в лесу">
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80" alt="Лес и деревья">
+<img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80" alt="Высокие деревья">
+</div></section>
+<section class="cta" id="contacts"><div class="wrap cta-inner"><div><h2>Нужна наша помощь?</h2><p>Свяжитесь с нами прямо сейчас</p><a class="bigphone" href="tel:+79538256904">☎ +7 953 825-69-04</a></div><a class="btn" href="tel:+79538256904">Позвонить&nbsp; →</a></div></section>
+</main>
+<footer><div class="wrap foot"><a class="logo" href="#top"><span class="tree">▲</span><span>Arbo</span>Fors</a><div class="motto">Безопасно • Быстро • Профессионально</div><div><a href="#services">Услуги</a>&nbsp;&nbsp; <a href="#about">О нас</a>&nbsp;&nbsp; <a href="#contacts">Контакты</a></div></div></footer>
+</body></html>
